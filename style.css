@@ -62,3 +62,18 @@ button {
 button:hover {
   background: #357ab8;
 }
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  background: #25D366; /* warna hijau WA */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+a:hover {
+  background: #1ebe5d;
+}
