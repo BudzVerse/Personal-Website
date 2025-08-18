@@ -26,8 +26,25 @@ document.getElementById("klikBtn").addEventListener("click", function() {
   p.style.textAlign = "center";
   document.body.appendChild(p);
 
-  // Tunggu 2 detik, lalu pindah ke playlist YouTube
+  // Aktifkan fade-out overlay + mainkan suara whoosh
+  const overlay = document.getElementById("overlay");
+  const whoosh = document.getElementById("whoosh");
+  overlay.classList.add("active");
+  whoosh.play();
+
+  // Tunggu 1.5 detik (overlay penuh), lalu pindah ke YouTube
   setTimeout(function() {
     window.location.href = "https://youtube.com/playlist?list=PLPanbgyToztYKvNJ42N1cw4_jhsABKUBH&si=fus4WT9kIsVY9xMD";
-  }, 2000);
+  }, 1500);
+});
+
+// --- Animasi Hobi ---
+window.addEventListener("load", () => {
+  const hobiItems = document.querySelectorAll("ul li");
+  hobiItems.forEach((item, index) => {
+    setTimeout(() => {
+      // animasi muncul + looping glow+bounce sudah di CSS
+      item.style.opacity = 1;
+    }, index * 500);
+  });
 });
