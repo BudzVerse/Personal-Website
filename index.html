@@ -19,6 +19,11 @@
     Browser kamu tidak mendukung audio.
   </audio>
 
+  <!-- Efek suara whoosh untuk fade-out -->
+  <audio id="whoosh">
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_13b15d77b7.mp3" type="audio/mpeg">
+  </audio>
+
   <header>
     <h1>Profil Diri</h1>
   </header>
@@ -47,6 +52,9 @@
     <!-- Tombol kontrol musik -->
     <button id="musikBtn">⏯️ Play / Pause Musik</button>
   </div>
+
+  <!-- Overlay buat fade-out -->
+  <div id="overlay"></div>
 
   <!-- Panggil file script.js -->
   <script src="script.js"></script>
