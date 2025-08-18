@@ -1,7 +1,8 @@
 body {
   font-family: Arial, sans-serif;
   text-align: center;
-  background-color: #f0f2f5;
+  background: url('https://i.ibb.co.com/qYZ0PJTd/IMG-20250818-WA0024.jpg') no-repeat center center fixed;
+  background-size: cover;
   margin: 0;
   padding: 0;
 }
