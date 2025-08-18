@@ -1,12 +1,18 @@
+/* Style dasar */
 body {
   font-family: Arial, sans-serif;
   text-align: center;
-  background: url('https://i.ibb.co.com/qYZ0PJTd/IMG-20250818-WA0024.jpg') no-repeat center center fixed;
-  background-size: cover;
   margin: 0;
   padding: 0;
+
+  /* Background dengan overlay */
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('https://i.ibb.co.com/qYZ0PJTd/IMG-20250818-WA0024.jpg') no-repeat center center fixed;
+  background-size: cover;
 }
 
+/* Header */
 header {
   background: #4a90e2;
   color: white;
@@ -17,16 +23,18 @@ header h1 {
   margin: 0;
 }
 
+/* Card Container */
 .container {
   margin: 30px auto;
   max-width: 600px;
   background: white;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
-img {
+/* Foto Profil */
+.container img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -34,6 +42,7 @@ img {
   border: 3px solid #4a90e2;
 }
 
+/* Teks Judul */
 h2 {
   color: #333;
 }
@@ -50,31 +59,37 @@ ul li {
   border-radius: 8px;
 }
 
-button {
-  background: #4a90e2;
+/* Tombol */
+a, button {
+  display: inline-block;
+  text-decoration: none;
+  background: #25d366; /* Warna hijau WA */
   color: white;
   border: none;
   padding: 10px 20px;
   border-radius: 8px;
   cursor: pointer;
   margin-top: 10px;
+  font-size: 14px;
+}
+
+button {
+  background: #4a90e2;
 }
 
 button:hover {
   background: #357ab8;
 }
 
-a {
-  display: inline-block;
-  text-decoration: none;
-  background: #25D366; /* warna hijau WA */
-  color: white;
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: 0.3s;
-}
+/* 🔹 Responsif (buat HP & PC) */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 15px;
+  }
 
-a:hover {
-  background: #1ebe5d;
+  .container img {
+    width: 120px;
+    height: 120px;
+  }
 }
