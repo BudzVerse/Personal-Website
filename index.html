@@ -13,6 +13,21 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Musik autoplay pakai link online -->
+  <audio id="lagu" autoplay loop muted>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    Browser kamu tidak mendukung audio.
+  </audio>
+
+  <script>
+    // Aktifkan suara setelah user interaksi (untuk bypass blokir autoplay di HP/PC)
+    document.addEventListener("click", function() {
+      const audio = document.getElementById("lagu");
+      audio.muted = false;
+      audio.play();
+    });
+  </script>
+
   <header>
     <h1>Profil Diri</h1>
   </header>
