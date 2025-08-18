@@ -1,4 +1,18 @@
+// --- Kontrol Musik ---
+const musik = document.getElementById("musik");
+const musikBtn = document.getElementById("musikBtn");
 
+musikBtn.addEventListener("click", () => {
+  if (musik.paused) {
+    musik.play();
+    musikBtn.textContent = "⏸️ Pause Musik";
+  } else {
+    musik.pause();
+    musikBtn.textContent = "▶️ Play Musik";
+  }
+});
+
+// --- Tombol Gaskeun 😎 ---
 document.getElementById("klikBtn").addEventListener("click", function() {
   // Ganti background ke warna random
   document.body.style.backgroundColor =
