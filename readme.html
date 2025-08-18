@@ -5,6 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>README - Bimantoro Website</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    pre {
+      background: rgba(0,0,0,0.7);
+      color: #00ffcc;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    h2 { color: #00ffcc; }
+    ul li { margin-bottom: 8px; }
+  </style>
 </head>
 <body>
   <header>
@@ -12,42 +23,64 @@
   </header>
 
   <div class="container">
-    <h2>Fitur</h2>
+    <h2>1. Struktur HTML</h2>
+    <p>Halaman utama (`index.html`) terdiri dari:</p>
     <ul>
-      <li>Profil Diri: Foto profil dengan animasi goyang</li>
-      <li>Hobi: Fade-in + Glow warna-warni + Bounce (looping)</li>
-      <li>Musik Autoplay: Bisa play/pause</li>
-      <li>Tombol Gaskeun 😎: Background random + teks "Gaskeun! 🚀" + Fade-out + Suara whoosh + Redirect YouTube</li>
-      <li>Link WhatsApp: Langsung chat</li>
+      <li><strong>&lt;header&gt;</strong> → Judul halaman.</li>
+      <li><strong>&lt;div class="container"&gt;</strong> → Semua konten utama seperti foto profil, hobi, link, tombol Gaskeun, dan tombol musik.</li>
+      <li><strong>&lt;img class="foto-profil"&gt;</strong> → Foto profil dengan animasi goyang.</li>
+      <li><strong>&lt;ul&gt;</strong> → Daftar hobi dengan animasi looping (fade-in + glow + bounce).</li>
+      <li><strong>&lt;audio id="musik"&gt;</strong> → Musik background autoplay & loop.</li>
+      <li><strong>&lt;button id="klikBtn"&gt;</strong> → Tombol Gaskeun 😎 yang trigger efek warna, teks, overlay, dan redirect YouTube.</li>
+      <li><strong>&lt;button id="musikBtn"&gt;</strong> → Tombol play/pause musik.</li>
+      <li><strong>&lt;div id="overlay"&gt;</strong> → Overlay hitam untuk efek fade-out saat Gaskeun ditekan.</li>
     </ul>
 
-    <h2>Struktur File</h2>
+    <h2>2. Styling CSS (`style.css`)</h2>
+    <p>CSS bertugas untuk tampilan & animasi:</p>
+    <ul>
+      <li><strong>body</strong> → Background gambar fixed, font, warna teks.</li>
+      <li><strong>.container</strong> → Box transparan, border-radius, margin & padding.</li>
+      <li><strong>.foto-profil</strong> → Animasi goyang (keyframes goyang).</li>
+      <li><strong>ul li</strong> → Animasi hobi: fadeInUpLoop, glow, bounce, delay per item.</li>
+      <li><strong>button</strong> → Styling tombol Gaskeun & musik (hover effect).</li>
+      <li><strong>#overlay</strong> → Overlay hitam fade-in saat tombol Gaskeun ditekan.</li>
+    </ul>
+
+    <h2>3. JavaScript (`script.js`)</h2>
+    <p>JS mengontrol interaktivitas:</p>
+    <ul>
+      <li><strong>Musik Play/Pause:</strong> toggle play dan update teks tombol.</li>
+      <li><strong>Tombol Gaskeun 😎:</strong>
+        <ul>
+          <li>Ganti background ke warna random.</li>
+          <li>Tambah teks "Gaskeun! 🚀" ke halaman.</li>
+          <li>Aktifkan overlay hitam dan mainkan suara whoosh.</li>
+          <li>Redirect ke playlist YouTube setelah 1.5 detik.</li>
+        </ul>
+      </li>
+      <li><strong>Animasi Hobi:</strong> Saat load, setiap &lt;li&gt; hobi diatur opacity dan animasi looping via CSS.</li>
+    </ul>
+
+    <h2>4. Struktur File</h2>
     <pre>
 /project-root
 │
-├─ index.html
-├─ style.css
-├─ script.js
-└─ readme.html
+├─ index.html       # Halaman utama
+├─ style.css        # Styling dan animasi
+├─ script.js        # Logika tombol & animasi
+└─ readme.html      # Halaman README ini
     </pre>
 
-    <h2>Cara Pakai</h2>
+    <h2>5. Cara Pakai</h2>
     <ol>
-      <li>Clone atau download project</li>
-      <li>Pastikan file berada di folder sama</li>
-      <li>Buka <strong>index.html</strong> di browser</li>
-      <li>Nikmati animasi, musik, dan tombol Gaskeun 😎!</li>
+      <li>Clone atau download project.</li>
+      <li>Pastikan semua file berada di folder yang sama.</li>
+      <li>Buka <strong>index.html</strong> di browser.</li>
+      <li>Nikmati animasi, musik, tombol Gaskeun, dan hobi yang beranimasi.</li>
     </ol>
 
-    <h2>Kustomisasi</h2>
-    <ul>
-      <li>Ganti musik di &lt;audio id="musik"&gt;</li>
-      <li>Ganti foto profil di &lt;img class="foto-profil"&gt;</li>
-      <li>Tambah hobi di &lt;ul&gt;</li>
-      <li>Ubah tombol Gaskeun redirect di script.js</li>
-    </ul>
-
-    <h2>Kontak</h2>
+    <h2>6. Kontak</h2>
     <p>WhatsApp: <a href="https://wa.me/6288226917073" target="_blank">Bimantoro</a></p>
 
     <br>
