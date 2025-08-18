@@ -1,39 +1,48 @@
-/* Style dasar */
 body {
   font-family: Arial, sans-serif;
-  text-align: center;
   margin: 0;
   padding: 0;
-
-  /* Background dengan overlay */
-  background: 
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('https://i.ibb.co.com/qYZ0PJTd/IMG-20250818-WA0024.jpg') no-repeat center center fixed;
+  text-align: center;
+  background: url('https://i.ibb.co.com/qYZ0PJTd/IMG-20250818-WA0024.jpg') no-repeat center center fixed;
   background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Header */
+/* Overlay gelap biar teks kebaca */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* transparansi 50% */
+  z-index: -1;
+}
+
 header {
   background: #4a90e2;
   color: white;
   padding: 20px;
+  font-size: 1.2em;
 }
 
 header h1 {
   margin: 0;
 }
 
-/* Card Container */
 .container {
   margin: 30px auto;
   max-width: 600px;
   background: white;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 
-/* Foto Profil */
+/* Foto profil */
 .container img {
   width: 150px;
   height: 150px;
@@ -42,11 +51,7 @@ header h1 {
   border: 3px solid #4a90e2;
 }
 
-/* Teks Judul */
-h2 {
-  color: #333;
-}
-
+/* List hobi */
 ul {
   list-style: none;
   padding: 0;
@@ -54,42 +59,49 @@ ul {
 
 ul li {
   background: #f4f4f4;
-  margin: 5px;
+  margin: 8px 0;
   padding: 10px;
   border-radius: 8px;
 }
 
-/* Tombol */
-a, button {
+/* Tombol WA */
+a {
   display: inline-block;
+  background: #25D366;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border-radius: 8px;
   text-decoration: none;
-  background: #25d366; /* Warna hijau WA */
+  font-weight: bold;
+}
+a:hover {
+  background: #1ebe57;
+}
+
+/* Tombol tambahan */
+button {
+  background: #4a90e2;
   color: white;
   border: none;
   padding: 10px 20px;
   border-radius: 8px;
   cursor: pointer;
   margin-top: 10px;
-  font-size: 14px;
 }
-
-button {
-  background: #4a90e2;
-}
-
 button:hover {
   background: #357ab8;
 }
 
-/* 🔹 Responsif (buat HP & PC) */
-@media (max-width: 768px) {
+/* Responsif untuk HP */
+@media (max-width: 600px) {
   .container {
-    width: 90%;
+    margin: 15px;
     padding: 15px;
   }
 
-  .container img {
-    width: 120px;
-    height: 120px;
+  header {
+    font-size: 1em;
+    padding: 15px;
   }
 }
