@@ -48,20 +48,7 @@
     <button id="musikBtn">⏯️ Play / Pause Musik</button>
   </div>
 
-  <!-- Panggil file JS -->
-  <script>
-    const musik = document.getElementById("musik");
-    const musikBtn = document.getElementById("musikBtn");
-
-    musikBtn.addEventListener("click", () => {
-      if (musik.paused) {
-        musik.play();
-        musikBtn.textContent = "⏸️ Pause Musik";
-      } else {
-        musik.pause();
-        musikBtn.textContent = "▶️ Play Musik";
-      }
-    });
-  </script>
+  <!-- Panggil file script.js -->
+  <script src="script.js"></script>
 </body>
 </html>
