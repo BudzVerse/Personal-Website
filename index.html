@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bima Toro - Personal Website</title>
+  <title>Bimantoro - Personal Website</title>
   <meta name="description" content="Welcome to my Personal Website"/>
   <link rel="shortcut icon" href="/icon.ico"/>
   <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="16x16"/>
@@ -13,20 +13,11 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Musik autoplay pakai link online -->
-  <audio id="lagu" autoplay loop muted>
+  <!-- Musik autoplay -->
+  <audio id="musik" autoplay loop>
     <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
     Browser kamu tidak mendukung audio.
   </audio>
-
-  <script>
-    // Aktifkan suara setelah user interaksi (untuk bypass blokir autoplay di HP/PC)
-    document.addEventListener("click", function() {
-      const audio = document.getElementById("lagu");
-      audio.muted = false;
-      audio.play();
-    });
-  </script>
 
   <header>
     <h1>Profil Diri</h1>
@@ -53,9 +44,25 @@
     </p>
 
     <button id="klikBtn">Gaskeun 😎</button>
+    <br><br>
+    <!-- Tombol kontrol musik -->
+    <button id="musikBtn">⏯️ Play / Pause Musik</button>
   </div>
 
   <!-- Panggil file JS -->
-  <script src="script.js"></script>
+  <script>
+    const musik = document.getElementById("musik");
+    const musikBtn = document.getElementById("musikBtn");
+
+    musikBtn.addEventListener("click", () => {
+      if (musik.paused) {
+        musik.play();
+        musikBtn.textContent = "⏸️ Pause Musik";
+      } else {
+        musik.pause();
+        musikBtn.textContent = "▶️ Play Musik";
+      }
+    });
+  </script>
 </body>
 </html>
