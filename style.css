@@ -98,7 +98,7 @@ button:hover {
 }
 
 ul li {
-  list-style: "🎮 ","🎬 ","❤️ "; /* bisa diganti 🎮 🎬 ❤️ sesuai hobi */
+  list-style: "⭐ "; /* bisa ganti 🎮 🎬 ❤️ sesuai hobi */
   font-size: 20px;
   margin: 10px 0;
   font-weight: bold;
