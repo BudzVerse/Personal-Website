@@ -127,3 +127,20 @@ ul li:nth-child(3) { animation-delay: 2s, 0s, 0s; }
   opacity: 1;
   pointer-events: auto;
 }
+
+footer {
+  text-align: center;
+  padding: 15px;
+  color: white;
+  font-weight: bold;
+  background: linear-gradient(270deg, red, orange, yellow, green, cyan, blue, violet, red);
+  background-size: 200% 200%;
+  animation: pelangi 8s linear infinite;
+  border-top: 3px solid #fff;
+}
+
+@keyframes pelangi {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
